@@ -1,3 +1,5 @@
+import Car from './Ihor';
+import car from '../data/car.json'
 import Plane from './Denys';
 import plane from '../data/plane.json';
 import sunrises from '../data/sunrises.json';
@@ -7,12 +9,14 @@ import Lenka from './Lenka'
 import Natalia  from "./Natalia";
 import flowers from '../data/flower.json'
 
+
 export const App = () => {
   return (
     <div>
+    <Car images={car}/>
       <Lenka dinosaur={dinosaur}/>
      <Natalia flowers={flowers}/>
-       <Sunrises sunrises={sunrises}/
+       <Sunrises sunrises={sunrises}/>
          <Plane plane={plane} />
     </div>
   );
