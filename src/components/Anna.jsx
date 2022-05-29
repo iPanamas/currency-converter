@@ -4,7 +4,7 @@ const Anime = ({anime}) => {
              <div>
                  <img
          src= {webformatURL}
-           width = {240}
+           alt="images"
        />
        <ul><li>{type}</li>
        <li>{tags}</li>

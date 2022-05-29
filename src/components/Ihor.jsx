@@ -3,7 +3,7 @@ const Car = ({images}) => {
     <ul>
       {images.map(({id, webformatURL}) => (
         <li key={id}>
-          <img src={webformatURL} alt="Car image"/>
+          <img src={webformatURL} alt="Car"/>
         </li>
       ))}
     </ul>
