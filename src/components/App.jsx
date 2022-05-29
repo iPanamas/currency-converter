@@ -1,3 +1,5 @@
+import Anna from "./Anna"
+import anime from "../data/anime.json";
 import Car from './Ihor';
 import car from '../data/car.json'
 import Plane from './Denys';
@@ -13,6 +15,7 @@ import flowers from '../data/flower.json'
 export const App = () => {
   return (
     <div>
+     <Anna anime={anime}>
     <Car images={car}/>
       <Lenka dinosaur={dinosaur}/>
      <Natalia flowers={flowers}/>
@@ -21,3 +24,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
