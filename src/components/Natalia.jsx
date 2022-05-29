@@ -3,7 +3,7 @@ function Natalia({ flowers }) {
       <ul>
         {flowers.map(({ previewURL, tags, previewWidth, views, downloads, likes, comments, id }) => {
           return (
-            <li class="item" key={id}>
+            <li key={id}>
               <img src={previewURL} alt={tags} width={previewWidth} />
               <p>{tags}</p>
               <ul>
