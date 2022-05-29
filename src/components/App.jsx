@@ -15,7 +15,7 @@ import flowers from '../data/flower.json'
 export const App = () => {
   return (
     <div>
-     <Anna anime={anime}>
+     <Anna anime={anime}/>
     <Car images={car}/>
       <Lenka dinosaur={dinosaur}/>
      <Natalia flowers={flowers}/>
