@@ -1,3 +1,7 @@
+
+    
+import sunrises from '../data/sunrises.json';
+import Sunrises from 'components/Iryna'
 import dinosaur from '../data/dinosaur'
 import Lenka from './Lenka'
 import Natalia  from "./Natalia";
@@ -8,6 +12,7 @@ export const App = () => {
     <div>
       <Lenka dinosaur={dinosaur}/>
      <Natalia flowers={flowers}/>
+       <Sunrises sunrises={sunrises}/
     </div>
   );
 };
