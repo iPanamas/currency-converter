@@ -1,3 +1,5 @@
+import Fox from './Vladimir';
+import foxData from '../Data/fox.json';
 import Anna from "./Anna"
 import anime from "../data/anime.json";
 import Car from './Ihor';
@@ -12,15 +14,17 @@ import Natalia  from "./Natalia";
 import flowers from '../data/flower.json'
 
 
+
 export const App = () => {
   return (
     <div>
+     <Fox stats={foxData}/>
      <Anna anime={anime}/>
-    <Car images={car}/>
-      <Lenka dinosaur={dinosaur}/>
+     <Car images={car}/>
+     <Lenka dinosaur={dinosaur}/>
      <Natalia flowers={flowers}/>
-       <Sunrises sunrises={sunrises}/>
-         <Plane plane={plane} />
+     <Sunrises sunrises={sunrises}/>
+     <Plane plane={plane} />
     </div>
   );
 };
