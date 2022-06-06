@@ -19,17 +19,16 @@ import dinosaur from '../data/dinosaur';
 import Natalia from './Natalia';
 import flowers from '../data/flower.json';
 
-
 export const App = () => {
   return (
     <div>
-      {<Fox stats={foxData} />
+      <Fox stats={foxData} />
       <Anna anime={anime} />
       <Car images={car} />
       <Lenka dinosaur={dinosaur} />
       <Natalia flowers={flowers} />
       <Sunrises sunrises={sunrises} />
-      <Plane plane={plane} />}
+      <Plane plane={plane} />
     </div>
   );
 };
