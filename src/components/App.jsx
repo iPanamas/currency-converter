@@ -1,29 +1,29 @@
 import Fox from './Vladimir';
-import foxData from '../Data/fox.json';
+import foxData from '../data/fox.json';
 
-// import Anna from './Anna';
-// import anime from '../Data/anime.json';
+import Anna from './Anna';
+import anime from '../data/anime.json';
 
 import Car from './Ihor';
-import car from '../Data/car.json';
+import car from '../data/car.json';
 
 import Plane from './Denys';
-import plane from '../Data/plane.json';
+import plane from '../data/plane.json';
 
 import Sunrises from './Iryna';
-import sunrises from '../Data/sunrises.json';
+import sunrises from '../data/sunrises.json';
 
 import Lenka from './Lenka';
-import dinosaur from '../Data/dinosaur';
+import dinosaur from '../data/dinosaur';
 
 import Natalia from './Natalia';
-import flowers from '../Data/flower.json';
+import flowers from '../data/flower.json';
 
 export const App = () => {
   return (
     <div>
       <Fox stats={foxData} />
-      {/* <Anna anime={anime} /> */}
+      <Anna anime={anime} />
       <Car images={car} />
       <Lenka dinosaur={dinosaur} />
       <Natalia flowers={flowers} />
