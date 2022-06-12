@@ -22,9 +22,10 @@ import { Component } from 'react';
 // import Converter from './Converter';
 import fetchUserCurrency from 'service/currencyAPI';
 import currenciesList from '../data/currenciesList.json';
+import ExchangeCurrency from 'service/ExchangeApi';
 
 export class App extends Component {
-  state = { userCurrency: 'USD' };
+  state = { userCurrency: 'USD', value: '' };
   componentDidMount() {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(position => {
@@ -35,18 +36,29 @@ export class App extends Component {
         );
       });
     }
+
+    ExchangeCurrency('USD', 'UAH', 200)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   }
 
   handleChange = event => {
     this.setState({ userCurrency: event.target.value });
   };
 
+  handleChangeCurrency = e => {
+    this.setState({ value: e.currentTarget.value });
+  };
+
   render() {
+    const { value, userCurrency } = this.state;
     return (
       <div>
+        <p>If You want you can choose your currency:</p>
         <select
           onChange={this.handleChange}
-          value={this.state.userCurrency}
+          value={userCurrency}
           name="currencyList"
           id=""
         >
@@ -58,7 +70,9 @@ export class App extends Component {
             );
           })}
         </select>
-        <p>{this.state.userCurrency}</p>
+        <p>Your current currency: {userCurrency}</p>
+
+        <input type="text" value={value} onChange={this.handleChangeCurrency} />
       </div>
     );
   }
