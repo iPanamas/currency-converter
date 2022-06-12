@@ -1,20 +1,23 @@
 function Natalia({ flowers }) {
-    return (
-      <ul>
-        {flowers.map(({ previewURL, tags, previewWidth, views, downloads, likes, comments, id }) => {
+  return (
+    <ul>
+      {flowers.map(
+        ({ tags, views, downloads, likes, comments, id, webformatURL }) => {
           return (
             <li key={id}>
-              <img src={previewURL} alt={tags} width={previewWidth} />
+              <img src={webformatURL} alt={tags} />
               <p>{tags}</p>
               <ul>
                 <li>Views:{views}</li>
                 <li>Downloads:{downloads}</li>
                 <li>Likes:{likes}</li>
                 <li>Comments:{comments}</li>
-            </ul>
-             </li>
-        )})}
+              </ul>
+            </li>
+          );
+        }
+      )}
     </ul>
-);
+  );
 }
-  export default Natalia;
+export default Natalia;
