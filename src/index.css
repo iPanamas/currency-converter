@@ -1,25 +1,18 @@
-@import-normalize; /* bring in normalize.css styles */
-@font-face {
-  font-family: "BabasNeue";
-  font-style: normal;
-  font-weight: 400;
-  src: local("BabasNeue"),
-       url("./fonts/Babas/BebasNeue-Regular.woff2") format("woff2"),
-       url("./fonts/Babas/BebasNeue-Regular.woff") format("woff");
-}
+/* bring in normalize.css styles */
+@import './fonts/fonts.css';
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }
 
 ul {

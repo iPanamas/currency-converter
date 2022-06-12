@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'BabasNeue';
+  src: local('BabasNeue'),
+    url('./Babas/BebasNeue-Regular.woff2') format('woff2'),
+    url('./Babas/BebasNeue-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'TitilliumWebRegular';
+  src: local('TitilliumWebRegular'),
+    url('./Tittilium/TitilliumWeb-Regular.woff2') format('woff2'),
+    url('./Tittilium/TitilliumWeb-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'TitilliumWebBold';
+  src: local('TitilliumWebBold'),
+    url('./Tittilium/TitilliumWeb-Bold.woff2') format('woff2'),
+    url('./Tittilium/TitilliumWeb-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'JosefinSansRegular';
+  src: local('JosefinSansRegular'),
+    url('./JosefinSans/JosefinSans-VariableFont_wght.woff2') format('woff2'),
+    url('./JosefinSans/JosefinSans-VariableFont_wght.woff') format('woff');
+}
+@font-face {
+  font-family: 'JosefinSansItalic';
+  src: local('JosefinSansItalic'),
+    url('./JosefinSans/JosefinSans-Italic-VariableFont_wght.woff2')
+      format('woff2'),
+    url('./JosefinSans/JosefinSans-Italic-VariableFont_wght.woff')
+      format('woff');
+}
