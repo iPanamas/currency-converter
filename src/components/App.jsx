@@ -19,7 +19,7 @@ import dinosaur from '../data/dinosaur';
 import Natalia from './Natalia';
 import flowers from '../data/flower.json'; */
 import { Component } from 'react';
-import Converter from './Converter';
+// import Converter from './Converter';
 import fetchUserCurrency from 'service/currencyAPI';
 import currenciesList from '../data/currenciesList.json';
 
