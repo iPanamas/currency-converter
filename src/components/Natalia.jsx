@@ -1,6 +1,6 @@
 function Natalia({ flowers }) {
   return (
-    <ul>
+    <ul style={{ fontFamily: 'BabasNeue' }}>
       {flowers.map(
         ({ tags, views, downloads, likes, comments, id, webformatURL }) => {
           return (
