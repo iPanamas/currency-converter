@@ -7,6 +7,9 @@ import currenciesList from '../data/currenciesList.json';
 const Converter = () => {
   const [userCurrency, setUserCurrency] = useState('USD');
   const [value, setValue] = useState('');
+  const [result, setResult] = useState(null);
+
+  
   useEffect(() => {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(position => {
@@ -16,19 +19,36 @@ const Converter = () => {
       });
     }
 
-    ExchangeCurrency('USD', 'UAH', 200)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+    // ExchangeCurrency('USD', 'UAH', 200)
+    //   .then(response => response.text())
+    //   .then(result => console.log(result))
+    //   .catch(error => console.log('error', error));
   }, []);
+
+  
 
   const handleChange = event => {
     setUserCurrency(event.target.value);
+
   };
 
-  const handleChangeCurrency = e => {
-    setUserCurrency(e.currentTarget.value);
+  const handleChangeCurrency = event => {
+    setValue(event.currentTarget.value);
+    
   };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    const splitValue = value.split(" ");
+    const amount = Number(splitValue[0]);
+    const from = splitValue[1];
+    const to = splitValue[3];
+
+       ExchangeCurrency(from, to, amount).then(response => response.json())
+      .then(({result}) => setResult(result))
+      .catch(error => console.log('error', error));
+     
+  }
 
   return (
     <div>
@@ -48,8 +68,11 @@ const Converter = () => {
         })}
       </select>
       <p>Your current currency: {userCurrency}</p>
-
-      <input type="text" value={value} onChange={handleChangeCurrency} />
+<form onSubmit={handleSubmit}>
+        <input type="text" value={value} onChange={handleChangeCurrency} placeholder="15 USD in UAH" />
+      </form>
+      {result && <p>{result}</p>}
+      
     </div>
   );
 };
