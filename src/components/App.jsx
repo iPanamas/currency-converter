@@ -18,19 +18,37 @@ import dinosaur from '../data/dinosaur';
 
 import Natalia from './Natalia';
 import flowers from '../data/flower.json'; */
-
+import { useState, useEffect } from 'react';
+import fetchUserCurrency from 'service/currencyAPI';
 import Converter from './Converter';
 import Rates from './Rates';
 import Navigation from './Navigation';
 import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
+  const [userCurrency, setUserCurrency] = useState('');
+
+  useEffect(() => {
+    if (window.navigator.geolocation) {
+      window.navigator.geolocation.getCurrentPosition(position => {
+        const lat = position?.coords?.latitude;
+        const lon = position?.coords?.longitude;
+        fetchUserCurrency(lat, lon).then(result => setUserCurrency(result));
+      });
+    }
+  }, []);
+
   return (
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Converter />} />
-        <Route path="/rates" element={<Rates />} />
+        <Route path="/" element={<Converter currency={userCurrency} />} />
+        <Route
+          path="/rates"
+          element={
+            <Rates currency={userCurrency} setUserCurrency={setUserCurrency} />
+          }
+        />
       </Routes>
     </>
   );
