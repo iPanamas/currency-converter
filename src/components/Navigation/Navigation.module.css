@@ -1,0 +1,26 @@
+.navList {
+  display: flex;
+  justify-content: center;
+
+}
+
+.navList__item {
+  text-align: center;
+  width: 100px;
+  margin-right: 20px;
+
+  border-radius: 10px;
+  transition: transform 125ms linear;
+}
+
+.navList__item:last-child {
+  margin: 0;
+}
+
+.navList__item:hover {
+transform: scale(1.1);
+}
+.navList__link {
+  font-size: 20px;
+}
+
