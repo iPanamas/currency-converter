@@ -1,0 +1,62 @@
+.ratesWrapper {
+
+ text-align: center;
+/* width: 600px;
+    position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+.ratesSelect {
+    background: rgba(255, 255, 255, 0.3);
+    width: 80px;
+
+    margin-left: 10px;
+    padding: 1em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.currentText {
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.ratesText {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.infoWrap {
+  padding: 50px;
+}
+
+.rate {
+  width: 600px;
+  margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid #ffffff70;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+
+}

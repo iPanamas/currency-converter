@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import currenciesList from 'data/currenciesList.json';
-
-import { fetchRates } from 'service/ExchangeApi';
+import s from './Rates.module.css';
+import { fetchRates } from 'service/ExchangeAPI';
 const Rates = ({ currency, setUserCurrency }) => {
   const [rates, setRates] = useState('');
 
@@ -17,35 +17,45 @@ const Rates = ({ currency, setUserCurrency }) => {
   }, [currency]);
 
   return (
-    <>
-      <p>If You want you can choose your currency:</p>
-      <select
-        value={currency}
-        name="currencyList"
-        id=""
-        onChange={handleChange}
-      >
-        {Object.keys(currenciesList).map(currency => {
-          return (
-            <option key={currency} value={currency}>
-              {currency}
-            </option>
-          );
-        })}
-      </select>
-      <p>Your current currency: {currency}</p>
+    <div className={s.ratesWrapper}>
+      <div className={s.infoWrap}>
+        <p className={s.currentText}>Your current currency: {currency}</p>
+        <p className={s.ratesText}>
+          If You want you can choose your currency -
+          <select
+            className={s.ratesSelect}
+            value={currency}
+            name="currencyList"
+            id=""
+            onChange={handleChange}
+          >
+            {Object.keys(currenciesList).map(currency => {
+              return (
+                <option key={currency} value={currency}>
+                  {currency}
+                </option>
+              );
+            })}
+          </select>
+        </p>
+      </div>
       {rates && (
-        <div>
-          <ul>
+        <div className={s.rate}>
+          <table>
+            <tr>
+              <td>Currency :</td>
+              <td>Value :</td>
+            </tr>
             {Object.entries(rates).map(([currency, value]) => (
-              <li key={currency}>
-                <p>{currency + ': ' + value}</p>
-              </li>
+              <tr>
+                <td>{currency}</td>
+                <td>{value}</td>
+              </tr>
             ))}
-          </ul>
+          </table>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
