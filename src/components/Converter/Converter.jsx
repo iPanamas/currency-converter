@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExchangeCurrency } from 'service/ExchangeApi';
+import { ExchangeCurrency } from 'service/ExchangeAPI';
 import s from './Converter.module.css';
 import { IconContext } from 'react-icons';
 import { GiMoneyStack } from 'react-icons/gi';
@@ -50,7 +50,7 @@ const Converter = ({ currency }) => {
             placeholder="15 USD in UAH"
           />
         </form>
-        {result && <p>{result}</p>}
+        {result && <p className={s.resultText}>{result}</p>}
       </div>
     </div>
   );

@@ -1,4 +1,8 @@
 .wrapper {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: flex;
   width: 600px;
   margin: 0 auto;
@@ -33,9 +37,13 @@
   margin-bottom: 20px;
 }
 
+.currencyForm {
+  margin-bottom: 20px;
+}
+
 .currencyInput {
     background: transparent;
-    width: 95px;
+    width: 160px;
     padding: 1em;
     border: none;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -47,4 +55,9 @@
     font-family: Montserrat, sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     outline: none;
+}
+
+.resultText {
+  font-size: 20px;
+  opacity: 0.7;
 }

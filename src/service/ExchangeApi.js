@@ -20,7 +20,6 @@ export function ExchangeCurrency(from, to, amount) {
 
 export function fetchRates(currency) {
   const symbols = Object.keys(currenciesList).join(',');
-  console.log(symbols);
   return fetch(
     `https://api.apilayer.com/exchangerates_data/latest?symbols=${symbols}&base=${currency}`,
     requestOptions

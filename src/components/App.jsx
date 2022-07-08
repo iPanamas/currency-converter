@@ -28,7 +28,7 @@ import fetchUserCurrency from 'service/currencyAPI';
 import Converter from './Converter/Converter';
 import Rates from './Rates/Rates';
 import AppBar from './AppBar/AppBar';
-import Container from './Container/Container';
+
 export default function App() {
   const [userCurrency, setUserCurrency] = useState('');
 
@@ -45,20 +45,16 @@ export default function App() {
   return (
     <>
       <AppBar />
-      <Container>
-        <Routes>
-          <Route path="/" element={<Converter currency={userCurrency} />} />
-          <Route
-            path="/rates"
-            element={
-              <Rates
-                currency={userCurrency}
-                setUserCurrency={setUserCurrency}
-              />
-            }
-          />
-        </Routes>
-      </Container>
+
+      <Routes>
+        <Route path="/" element={<Converter currency={userCurrency} />} />
+        <Route
+          path="/rates"
+          element={
+            <Rates currency={userCurrency} setUserCurrency={setUserCurrency} />
+          }
+        />
+      </Routes>
     </>
   );
 }
