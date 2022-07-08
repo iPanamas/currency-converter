@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { ExchangeCurrency } from '../../service/ExchangeAPI';
+import { ExchangeCurrency } from 'service/ExchangeAPI';
 
 import s from './Converter.module.css';
 import { IconContext } from 'react-icons';

@@ -18,6 +18,7 @@ import dinosaur from '../data/dinosaur';
 
 import Natalia from './Natalia';
 import flowers from '../data/flower.json'; */
+
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
