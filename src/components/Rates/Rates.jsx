@@ -17,10 +17,12 @@ const Rates = ({ currency, setUserCurrency }) => {
   }, [currency]);
 
   return (
-    <div className={s.ratesWrapper}>
-      <div className={s.infoWrap}>
-        <p className={s.currentText}>Your current currency: {currency}</p>
-        <p className={s.ratesText}>
+    <div className={s.rates}>
+      <div className={s.ratesInfoWrap}>
+        <p className={s.ratesInfoWrap__currentText}>
+          Your current currency: {currency}
+        </p>
+        <p className={s.ratesInfoWrap__text}>
           If You want you can choose your currency -
           <select
             className={s.ratesSelect}
@@ -42,16 +44,18 @@ const Rates = ({ currency, setUserCurrency }) => {
       {rates && (
         <div className={s.rate}>
           <table>
-            <tr>
-              <td>Currency :</td>
-              <td>Value :</td>
-            </tr>
-            {Object.entries(rates).map(([currency, value]) => (
+            <tbody>
               <tr>
-                <td>{currency}</td>
-                <td>{value}</td>
+                <td>Currency :</td>
+                <td>Value :</td>
               </tr>
-            ))}
+              {Object.entries(rates).map(([currency, value]) => (
+                <tr key={currency}>
+                  <td>{currency}</td>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       )}
