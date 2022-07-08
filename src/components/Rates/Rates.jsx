@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import currenciesList from 'data/currenciesList.json';
 import s from './Rates.module.css';
-import { fetchRates } from 'service/ExchangeAPI';
+import { fetchRates } from '../../service/ExchangeApi';
 const Rates = ({ currency, setUserCurrency }) => {
   const [rates, setRates] = useState('');
 
