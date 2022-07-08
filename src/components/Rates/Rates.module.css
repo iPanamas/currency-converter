@@ -43,6 +43,7 @@ margin-bottom: 20px;
 .rate {
   width: 600px;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 td, th {
@@ -54,6 +55,7 @@ td, th {
 table {
     border-collapse: collapse;
     width: 100%;
+
 }
 
 th, td {

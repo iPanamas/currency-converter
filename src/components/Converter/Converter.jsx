@@ -41,7 +41,7 @@ const Converter = ({ currency }) => {
           Your current currency: <br></br>
           {currency}
         </p>
-        <form className={s.currencyForm}>
+        <form className={s.currencyForm} onSubmit={handleSubmit}>
           <input
             className={s.currencyInput}
             type="text"
