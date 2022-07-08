@@ -46,8 +46,8 @@ const Rates = ({ currency, setUserCurrency }) => {
           <table>
             <tbody>
               <tr>
-                <td>Currency: </td>
-                <td>Value: </td>
+                <td>Currency : </td>
+                <td>Value : </td>
               </tr>
               {Object.entries(rates).map(([currency, value]) => (
                 <tr key={currency}>
